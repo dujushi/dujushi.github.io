@@ -46,9 +46,9 @@ public bool AcceptTerms { get; set; }
 {% endhighlight %}
 
 ## Github
-[https://github.com/dujushi/snippets/tree/master/MustBeTrue](https://github.com/dujushi/snippets/tree/master/MustBeTrue)
+[https://github.com/dujushi/snippets/tree/master/MustBeTrue](https://github.com/dujushi/snippets/tree/master/MustBeTrue){:target="_blank"}
 
 ## Reference:
-1. [ASP.NET MVC - Required Checkbox with Data Annotations](http://jasonwatmore.com/post/2013/10/16/ASPNET-MVC-Required-Checkbox-with-Data-Annotations.aspx)
-2. [THE COMPLETE GUIDE TO VALIDATION IN ASP.NET MVC 3](http://www.devtrends.co.uk/blog/the-complete-guide-to-validation-in-asp.net-mvc-3-part-1)
-3. [Unobtrusive Client Validation in ASP.NET MVC 3](http://bradwilson.typepad.com/blog/2010/10/mvc3-unobtrusive-validation.html)
+1. [ASP.NET MVC - Required Checkbox with Data Annotations](http://jasonwatmore.com/post/2013/10/16/ASPNET-MVC-Required-Checkbox-with-Data-Annotations.aspx){:target="_blank"}
+2. [THE COMPLETE GUIDE TO VALIDATION IN ASP.NET MVC 3](http://www.devtrends.co.uk/blog/the-complete-guide-to-validation-in-asp.net-mvc-3-part-1){:target="_blank"}
+3. [Unobtrusive Client Validation in ASP.NET MVC 3](http://bradwilson.typepad.com/blog/2010/10/mvc3-unobtrusive-validation.html){:target="_blank"}
