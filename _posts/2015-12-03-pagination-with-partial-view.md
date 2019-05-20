@@ -1,4 +1,4 @@
-This pagination feature with partial view was inspired by Adam Freeman's pagination html helper in his book `<Pro ASP.NET MVC 5>`. Instead of using html helper, I implemented it with a partial view so I could customize the content and style easily.<!-- more -->
+This pagination feature with partial view was inspired by Adam Freeman's pagination html helper in his book `<Pro ASP.NET MVC 5>`. Instead of using html helper, I implemented it with a partial view so I could customize the content and style easily.
 
 ## Pagination View Model
 {% highlight c# %}

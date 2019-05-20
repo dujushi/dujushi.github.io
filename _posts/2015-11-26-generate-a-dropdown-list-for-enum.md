@@ -7,7 +7,7 @@ public enum CategoryEnum
     Tourism
 }
 {% endhighlight %}
-And we need a dropdown list for this category field. How would you implement this?<!-- more -->
+And we need a dropdown list for this category field. How would you implement this?
 
 ## Basic
 First, we get all values of CategoryEnum:

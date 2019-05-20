@@ -1,4 +1,4 @@
-To limite page size, we only want to list a limited number of items at first. And then click Show More button to render more items. We can use partial view to reuse our code. In this example we will implement a simple task list.<!-- more --> 
+To limite page size, we only want to list a limited number of items at first. And then click Show More button to render more items. We can use partial view to reuse our code. In this example we will implement a simple task list. 
 
 * Create show task action
 {% highlight c# %}
