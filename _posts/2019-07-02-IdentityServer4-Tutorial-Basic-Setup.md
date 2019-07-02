@@ -1,4 +1,3 @@
-
 ---
 title: 'IdentityServer4 Tutorial: Basic Setup'
 ---
