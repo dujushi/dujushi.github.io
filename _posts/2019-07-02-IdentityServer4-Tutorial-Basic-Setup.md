@@ -1,7 +1,7 @@
 ---
-title: 'IdentityServer4 Tutorial: Basic Setup'
+title: 'IdentityServer4 Tutorial - Part 1: Basic Setup'
 ---
-IdentityServer4 is one of the most popular OpenID Connect and OAuth 2.0 framework for ASP.NET Core. In this tutorial, it will show you how easy it is to build an authentication server with the library.
+IdentityServer4 is one of the most popular OpenID Connect and OAuth 2.0 framework for ASP.NET Core. This tutorial will show you how to build an authentication server with the library.
 
 ## Create AuthenticationServer Project
 Create an empty ASP.NET Core web application with Visual Studio. Uninstall nuget package `Microsoft.AspNetCore.Razor.Design`. We don't need Razor in this project. Install nuget package `IdentityServer4`. 
