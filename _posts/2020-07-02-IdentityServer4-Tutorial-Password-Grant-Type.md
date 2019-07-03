@@ -100,7 +100,7 @@ The [token request endpoint](http://docs.identityserver.io/en/latest/endpoints/t
 curl -X POST https://localhost:44360/connect/token -d "client_id=client_id1&grant_type=password&username=username&password=password"
 {% endhighlight %}
 
-When you get a JWT, go to [https://jwt.io/](https://jwt.io/){:target="_blank"} to find out the details embeded.
+When you get a JWT, go to [https://jwt.io](https://jwt.io){:target="_blank"} to find out the details embeded.
 
 ## Custom Claims
 You can add custom claims like this. 
@@ -124,7 +124,7 @@ public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
 }
 {% endhighlight %}
 
-But you need to tell IdentityServer to add them to your JWT as well.
+But you need to tell IdentityServer to add them to your JWT.
 
 {% highlight csharp %}
 public void ConfigureServices(IServiceCollection services)
