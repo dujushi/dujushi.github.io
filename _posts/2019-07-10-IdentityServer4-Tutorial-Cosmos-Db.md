@@ -143,6 +143,8 @@ public class CosmosDbPersistedGrantStore : IPersistedGrantStore
 }
 {% endhighlight %}
 
+We need to encode the key to make it url friendly. 
+
 Add a `CosmosDB` section into appsettings.json.
 
 {% highlight json %}
@@ -227,4 +229,4 @@ public class Startup
 {% endhighlight %}
 
 # Refresh Token Lifetime
-The lifetime of a refresh token is configured via [client setting](http://docs.identityserver.io/en/latest/topics/refresh_tokens.html?highlight=AbsoluteRefreshTokenLifetime#additional-client-settings){:target="_blank"} `AbsoluteRefreshTokenLifetime`. Normally we would need to create a task to delete expired refresh tokens. But Azure Cosmos DB has a [nice Time to live](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-time-to-live){:target="_blank"} feature. When it is configured, expired tokens will be deleted automatically.
+The lifetime of a refresh token is configured via [client setting](http://docs.identityserver.io/en/latest/topics/refresh_tokens.html?highlight=AbsoluteRefreshTokenLifetime#additional-client-settings){:target="_blank"} `AbsoluteRefreshTokenLifetime`. Normally we would need to create a task to delete expired refresh tokens. But Azure Cosmos DB has a nice [Time to live](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-time-to-live){:target="_blank"} feature. When it is configured, expired tokens will be deleted automatically.
