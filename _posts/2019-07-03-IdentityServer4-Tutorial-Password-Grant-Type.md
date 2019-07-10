@@ -102,6 +102,11 @@ curl -X POST https://localhost:44360/connect/token -d "client_id=client_id1&gran
 
 When you get a JWT, go to [https://jwt.io](https://jwt.io){:target="_blank"} to find out the details embeded.
 
+And here is the cURL script to use the refresh token. (PS: change the refresh token to a valid one.)
+{% highlight shell %}
+curl -X POST https://localhost:44360/connect/token -d "client_id=client_id1&grant_type=refresh_token&refresh_token=13c13411222c2bebf7ec3eef16b1f8bca1d91695c26a2a9ae15effd44c811281"
+{% endhighlight %}
+
 ## Custom Claims
 You can add custom claims like this. 
 
