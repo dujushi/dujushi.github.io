@@ -40,12 +40,12 @@ public class PersistedGrantItem
 
 All the properties are the same as in `PersistedGrant`. But we map `Key` to `id` and change other property names to follow the naming convention.
 
-Let's create a `Mapper` class to make conversion between the two easier.
+Let's create a `PersistedGrantMapper` class to make conversion between the two easier.
 
 {% highlight csharp %}
-public static class Mapper
+public static class PersistedGrantMapper
 {
-    public static PersistedGrantItem ConvertToPersistedGrantItem(PersistedGrant persistedGrant)
+    public static PersistedGrantItem ToItem(this PersistedGrant persistedGrant)
     {
         var persistedGrantItem = new PersistedGrantItem
         {
@@ -60,7 +60,7 @@ public static class Mapper
         return persistedGrantItem;
     }
 
-    public static PersistedGrant ConvertToPersistedGrant(PersistedGrantItem persistedGrantItem)
+    public static PersistedGrant ToModel(this PersistedGrantItem persistedGrantItem)
     {
         var persistedGrant = new PersistedGrant
         {
@@ -95,7 +95,7 @@ public class CosmosDbPersistedGrantStore : IPersistedGrantStore
     public Task StoreAsync(PersistedGrant grant)
     {
         grant.Key = EncodePersistedGrantKey(grant.Key);
-        var persistedGrantItem = Mapper.ConvertToPersistedGrantItem(grant);
+        var persistedGrantItem = grant.ToItem();
         return _container.CreateItemAsync(persistedGrantItem);
     }
 
@@ -110,7 +110,7 @@ public class CosmosDbPersistedGrantStore : IPersistedGrantStore
         }
 
         var persistedGrantItem = (PersistedGrantItem)result;
-        var persistedGrant = Mapper.ConvertToPersistedGrant(persistedGrantItem);
+        var persistedGrant = persistedGrantItem.ToModel();
         return persistedGrant;
     }
 
