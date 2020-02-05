@@ -1,5 +1,5 @@
 ---
-title: 'HttResponse extension: WriteJsonAsync'
+title: 'HttpResponse extension: WriteJsonAsync'
 ---
 This is a brief extension method for `HttpReponse` to write any object in JSON format.
 
