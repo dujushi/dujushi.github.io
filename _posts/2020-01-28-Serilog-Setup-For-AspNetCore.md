@@ -3,8 +3,8 @@ title: 'Serilog Setup for AspNetCore'
 ---
 [Serilog](https://serilog.net/){:target="_blank"} is one of the most popular logging libraries. This tutorial will show you how to set it up for an AspNetCore project.
 
-## Install Nuget Package Serilog.AspNetCore
-[Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore){:target="_blank"} includes many Serilog Nuget packages you will need for your AspNetCore project. So you don't need to install them individually. 
+## Serilog.AspNetCore
+Install Nuget Package [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore){:target="_blank"}. It is the recommended nuget package to configure Serilog for AspNetCore projects.
 
 ## Add JSON Configuration
 {% highlight json %}
@@ -24,7 +24,8 @@ title: 'Serilog Setup for AspNetCore'
         "Name": "File",
         "Args": {
           "path": "C:\\Logs\\serilog-setup.txt",
-          "rollingInterval": "Day"
+          "rollingInterval": "Day",
+          "outputTemplate": "[{Timestamp:HH:mm:ss.fff} {Level:u3}] {SourceContext}: {Message:lj}{NewLine}{Exception}"
         }
       }
     ]
@@ -32,7 +33,7 @@ title: 'Serilog Setup for AspNetCore'
 }
 {% endhighlight %}
 
-This sample configuration asks Serilog to use file logging. To learn more about Serilog configuration, please read [this doc](https://github.com/serilog/serilog/wiki/Configuration-Basics){:target="_blank"}. For json configuration syntax, please refer to [Serilog.Settings.Configuration](https://github.com/serilog/serilog-settings-configuration){:target="_blank"}.
+This sample configuration asks Serilog to use file logging. To learn more about Serilog configuration, please read [this doc](https://github.com/serilog/serilog/wiki/Configuration-Basics){:target="_blank"}. For json configuration syntax, please refer to [Serilog.Settings.Configuration](https://github.com/serilog/serilog-settings-configuration){:target="_blank"}. You can find a more advanced sample [here](https://github.com/serilog/serilog-settings-configuration/blob/dev/sample/Sample/appsettings.json){:target="_blank"}.
 
 ## Load JSON Configuration
 {% highlight csharp %}
@@ -81,9 +82,9 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Refer to [Program.cs](https://github.com/dujushi/SerilogSetup/blob/master/SerilogSetup/Program.cs){:target="_blank"}.
 
-## Use Serilog Request Logging Middleware
+## Do Not Use Serilog Request Logging Middleware
 {% highlight csharp %}
 app.UseSerilogRequestLogging();
 {% endhighlight %}
 
-Refer to [Startup.cs](https://github.com/dujushi/SerilogSetup/blob/master/SerilogSetup/Startup.cs){:target="_blank"}.
+This is suggested in the document. Although it offers some benefits, it also causes the unhandled exceptions being [logged twice](https://github.com/serilog/serilog-aspnetcore/blob/19d871c78f697951704767d3d603708fc6039e9f/src/Serilog.AspNetCore/AspNetCore/RequestLoggingMiddleware.cs#L64){:target="_blank"}. Until it is fixed, I don't suggest using it.
