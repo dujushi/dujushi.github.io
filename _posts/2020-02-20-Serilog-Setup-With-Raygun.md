@@ -21,7 +21,7 @@ Now you can add the [configuration](https://github.com/dujushi/SerilogRaygunSetu
 
 Replace `RaygunAPIKey` and `ProjectName` with your own value. The sink has a few other arguments. You can refer to [its document](https://github.com/serilog/serilog-sinks-raygun){:target="_blank"} to configure them.
 
-There are a few points deserves your notice: 
+There are a few points that deserve your attention: 
 1. Raygun uses exception message as the error title. If you log any messages without an exception. The messages will be grouped under `Unknown error`. 
 2. The `restrictedToMinimumLevel` argument defaults to Error. You may set up `MinimumLevel` to `Debug`. But it still only logs errors and fatals. You'd better not to change the valules, because Raygun only likes exceptions.
 
