@@ -37,7 +37,7 @@ public class WeatherForecastClient : IWeatherForecastClient
 
 This sample uses `Typed clients`. I have created a [RequestBin](http://requestbin.net/r/1fwlgic1?inspect){:target="_blank"} to accept the post message. The tricky part is to generate a JSON string for the request. And if you need to pass a different header value for each individual request, remember to remove the header before add the new value. Otherwise, the new value will be appended to the previous value because the same `HttpClient` instance is shared between requests. You can use [Header Propagation](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1#header-propagation-middleware) if the header is from the incoming request.
 
-# Extension
+### Extension
 {% highlight csharp %}
 public static class WeatherForecastClientExtensions
 {
