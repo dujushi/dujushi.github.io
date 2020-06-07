@@ -1,7 +1,7 @@
 ---
 title: 'Sync Cosmos DB Collection to Blob Storage with Azure Functions Cosmos DB Trigger'
 ---
-[Azure Cosmos DB change feed](https://docs.microsoft.com/en-us/azure/cosmos-db/change-feed){:target="_blank"} allows us to listen to all inserts and updates to Cosmos DB collections. [Azure Cosmos DB trigger](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-trigger?tabs=csharp){:target="_blank"} is the easiest way to utilize the feature. This article will demostrate how to sync Cosmos DB collection to Blob strorage with change feed.
+[Azure Cosmos DB change feed](https://docs.microsoft.com/en-us/azure/cosmos-db/change-feed){:target="_blank"} allows us to listen to all inserts and updates to Cosmos DB collections. [Azure Cosmos DB trigger](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-trigger?tabs=csharp){:target="_blank"} is the easiest way to utilize the feature. This article demonstrates how to sync Cosmos DB collection to Blob Storage with change feed.
 
 ### Azure Cosmos DB Emulator
 Follow [Azure Cosmos DB Emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator){:target="_blank"} document to install the emulator. So we can develop Cosmos DB applications locally.
@@ -10,7 +10,7 @@ Follow [Azure Cosmos DB Emulator](https://docs.microsoft.com/en-us/azure/cosmos-
 [Azure Storage Emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator?toc=/azure/storage/blobs/toc.json){:target="_blank"} comes with Visual Studio 2019. Follow [this document](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator?toc=/azure/storage/blobs/toc.json#start-and-initialize-the-storage-emulator){:target="_blank"} to start the emulator. 
 
 ### Azure Storage Explorer
-We can use [Azure Storage Explorer]([https://azure.microsoft.com/en-us/features/storage-explorer/](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc){:target="_blank"} to view contents in Azure Strorage Emulator.
+We can use [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/){:target="_blank"} to view contents in Azure Storage Emulator.
 
 ### Getting Started with Azure Functions
 If you are new to Azure Functions, follow [Quickstart: Create your first function in Azure using Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-your-first-function-visual-studio){:target="_blank"} to create your first function. Instead of using HTTP trigger, let's use Cosmos DB trigger when create the project.
