@@ -27,7 +27,7 @@ private static readonly AsyncRetryPolicy RetryPolicy = Policy
 The retry policy [adds some randomness to the exponential backoff in case of high concurrency](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly#add-a-jitter-strategy-to-the-retry-policy){:target="_blank"}.
 
 ### Garage.Polly.Extensions.Dapper
-The nuget package is pushed to [nuget.org](https://www.nuget.org/packages/Garage.Polly.Extensions.Dapper/){:target="_blank"} with an Azure Pipeline wich you can find in the repository.
+The nuget package is pushed to [nuget.org](https://www.nuget.org/packages/Garage.Polly.Extensions.Dapper/){:target="_blank"} with an Azure Pipeline which you can find in the repository.
 
 
 ### Sample project
